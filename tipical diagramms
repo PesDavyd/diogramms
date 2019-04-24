@@ -1,0 +1,82 @@
+#Круговая диаграмма
+==========================
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+Volue = [250032, 195434]
+male = ['men', 'woman']
+cols = ['Blue', 'Pink']
+
+plt.pie(Volue, labels = male, colors = cols)
+
+plt.title('Population')
+
+plt.legend(loc = 'upper left')
+
+plt.show()
+
+=============================
+#Гистограмма
+=============================
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = [2, 7, 4, 1, -3]
+y = [3, 5, 1, 0 ,-2]
+
+x2 = [4, 3, 6, 5, 0]
+y2 = [0, 2, 4 ,-1, 8]
+
+plt.bar(x, y, color = 'purple')
+plt.bar(x2,y2, color = 'brown')
+
+plt.bar(y, x, color = 'pink')
+plt.bar(y2,x2, color = 'black')
+
+plt.show()
+
+==============================
+#Линейный график
+==============================
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(-10, 10, 40)
+y = x**2
+
+plt.plot(x, y, color = 'red', marker = 'o', label = '1st', linestyle = '--', markerfacecolor = 'green')
+plt.plot(y, x, color = 'green', marker = 'o', label = '2nd', linestyle = '-', markerfacecolor = 'red')
+
+plt.plot(x, -y, color = 'blue', marker = 'o', label = '3rd', linestyle = '--', markerfacecolor = 'lime')
+plt.plot(-y, x, color = 'lime', marker = 'o', label = '4th', linestyle = '-', markerfacecolor = 'blue')
+
+plt.legend(loc = 'upper right')
+
+plt.show()
+
+=================================
+#Точечная диаграмма
+=================================
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = [0, 3, 2, 7, 5, 11]
+y = [2, 6, 4, 10, 8, 12]
+
+x2 = np.linspace(-10, 10, 25)
+y2 = x2*2 // 3 + 7
+
+plt.scatter(x, y, label = 'First', color = 'brown', marker = 'o')
+plt.legend(loc = 'best')
+
+plt.scatter(x2, y2, label = 'Second', color = 'gray', marker = 'x')
+
+plt.xlabel('Абцисса')
+plt.ylabel('Ордината')
+
+plt.title('Test grfic')
+
+plt.show()
